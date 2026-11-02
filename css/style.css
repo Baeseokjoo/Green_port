@@ -1,0 +1,216 @@
+@charset 'utf-8';
+
+/* 폰트설정 */
+/* .gothic-a1-thin {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.gothic-a1-extralight {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.gothic-a1-light {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gothic-a1-medium {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.gothic-a1-semibold {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.gothic-a1-bold {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.gothic-a1-extrabold {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.gothic-a1-black {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+} */
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  /* 폰트설정 */
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* 폰트를 읽어오기 전 기본 폰트로 보여지고 폰트를 다 읽고나서 교체해주는 것 */
+  font-display: swap;
+}
+/* Header영역 */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  >a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+
+  }
+  >p{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem; 
+  }
+}
+header>ul{
+  display: flex;
+  gap: 1rem;
+}
+/* h1폰트설정 */
+h1{
+  font-family: 'myfont',sans-serif;
+}
+/* maim-#hero 영역 */
+#hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background-color: #ccc; */
+  background-image: linear-gradient(90deg,rgba(56, 84, 69, 0.5) 0%, rgba(56, 84, 69, 0.5) 100%), url(../image/green-hero.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: var(--white-color);
+}
+#hero>h1{
+  font-size: 3rem;
+  font-weight: 700;
+}
+#hero>a{
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+#hero>.line{
+  width: 60px;
+  height: 4px;
+  border: 2px;
+  background-color: var(--accent-color);
+}
+
+/* main-#plants 영역 */
+
+#plants{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+#plants>.line{
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+}
+#plants>.cards{
+  display: flex;
+  width: 1000px;
+  gap: 2rem;
+
+}
+#plants>.cards>li{
+  flex: 1;
+  border: 1px solid #dfdfdf;
+  overflow: hidden;
+  border-radius: 1rem;
+  /* 위치 기준점 (기준점을 정하지 않으면 body가 기준이 된다.) */
+  position: relative;
+  >.badge{
+    background-color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    /* 위치이동 (ignore) */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  >img{
+    width: 100%;
+  }
+  >.card-text{
+    padding: 1rem;
+    line-height: 1.8;
+    >p:nth-child(2){
+      font-size: 0.9rem;
+    }
+    >p:nth-child(3){
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+  }
+}
+
+/* main-#feature 영역 */
+#feature{
+  display: flex;
+  width: 1000px;
+  justify-content: space-around;
+  margin: 2rem auto;
+  >div{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    >p:nth-child(1){
+      font-size: 3rem;
+    }
+    >p:nth-child(2){
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    >p:nth-child(3){
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Footer영역 */
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+footer>ul{
+  display: flex;
+  gap: 1rem;
+} 
